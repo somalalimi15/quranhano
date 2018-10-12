@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-const prefix = q'
+const prefix = 'q'
 
 
 Codes.on("message", message => {
@@ -72,6 +72,11 @@ Codes.on("message", message => {
 
 
         });
+
+client.on('ready', () => {
+    client.channels.find(c => c.id === '500011666273075233').join();
+});
+
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
