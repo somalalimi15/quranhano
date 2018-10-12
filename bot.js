@@ -3,7 +3,7 @@ const client = new Discord.Client();
 const prefix = 'q'
 
 
-Codes.on("message", message => {
+client.on('message', message => {
 
                                 if (message.content === q1 ) {
                           message.react('🔊')
